@@ -34,7 +34,9 @@ crearProducto(3, "Termo Stanley", 45000, 5, "Img.Stanley/jpg", "Color verde, apr
 
 console.log(crearProducto);*/
 
-let producto1 = {
+/////////////////////////////////////////////
+
+/*let producto1 = {
   nombre: "Call of Duty World War 2",
   precio: 4500
 }
@@ -54,5 +56,48 @@ producto1.peso = "55 GB"
 producto2.imagen = "imagen/producto2.png"
 producto2.peso = "88.64 GB"
 
-console.log(productos)
+console.log(productos)*/
 
+let productos = [];
+
+function crearProducto(titulo, descripcion, precio, imagen){
+  let producto = {
+    titulo,
+    descripcion,
+    precio,
+    imagen,
+  };
+
+return producto;
+}
+
+function subirProductos(producto, array){
+  array.push(producto);
+  return array;
+}
+
+let User = {
+  nombre: "Mati",
+  apellido: "Sosa",
+  admin: true,
+};
+
+function login(usuario) {
+  if (usuario.admin) {
+    subirProductos(
+      crearProducto("Brazuca", "del mundial 2014", 5000, "/imagen/brazuca/png"),
+      productos
+    );
+    
+    productos.push(
+      crearProducto("Jabulani", "del mundial 2010", 4500, "/imagen/jabulani/png")
+    );
+  } 
+    else{
+    alert("ehh loco no sos admin ,tomatela");
+  }
+}
+
+login(User);
+
+console.log(productos);
