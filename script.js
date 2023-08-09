@@ -1,3 +1,5 @@
+///////////////////////////////// ejercicio de crear productos con una lista ////////////////////////////////////
+
 /*let envio = true
 let envioGratis = false
 
@@ -34,7 +36,7 @@ crearProducto(3, "Termo Stanley", 45000, 5, "Img.Stanley/jpg", "Color verde, apr
 
 console.log(crearProducto);*/
 
-/////////////////////////////////////////////
+////////////////// ejercio pushear elementos a una array ///////////////////////////
 
 /*let producto1 = {
   nombre: "Call of Duty World War 2",
@@ -58,7 +60,9 @@ producto2.peso = "88.64 GB"
 
 console.log(productos)*/
 
-let productos = [];
+/////////////////// ejercicio de acceder a subir productos solo si sos admin ///////////////////////////
+
+/*let productos = [];
 
 function crearProducto(titulo, descripcion, precio, imagen){
   let producto = {
@@ -100,4 +104,31 @@ function login(usuario) {
 
 login(User);
 
-console.log(productos);
+console.log(productos);*/
+
+////////////////////////// ejercicio de intentos de inicio de sesión //////////////////////////////
+
+const usuario = {
+  nombre: "admin",
+  contrasenia: "1234",
+}
+
+function login() {
+      for (let intentos=1 ; intentos<=3; intentos++){
+      const nombre = prompt("ingrese el nombre de usuario");
+      const contrasenia = prompt("ingrese su contraseña");
+
+      console.log(nombre);
+      console.log(contrasenia);
+
+      if (nombre == usuario.nombre && contrasenia == usuario.contrasenia) {
+          console.log("logueado");
+          return true;
+      } 
+      else{ console.log("Intento fallido, intente otra vez")
+
+    }
+  }
+}; 
+
+login();
