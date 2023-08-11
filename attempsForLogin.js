@@ -6,21 +6,22 @@ const usuario = {
 }
 
 function login() {
-      for (let intentos=1 ; intentos<=3; intentos++){
-      const nombre = prompt("ingrese el nombre de usuario");
-      const contrasenia = prompt("ingrese su contraseña");
+  for (let intentos = 1; intentos <= 3; intentos++) {
+    const nombre = prompt("ingrese el nombre de usuario");
+    const contrasenia = prompt("ingrese su contraseña");
 
-      console.log(nombre);
-      console.log(contrasenia);
+    console.log(nombre);
+    console.log(contrasenia);
 
-      if (nombre == usuario.nombre && contrasenia == usuario.contrasenia) {
-          console.log("logueado");
-          return true;
-      } 
-      else{ console.log("Intento fallido, intente otra vez")
+    if (nombre == usuario.nombre && contrasenia == usuario.contrasenia) {
+      console.log("logueado");
+      return true;
+    }
+    else {
+      console.log("Intento fallido, intente otra vez")
 
     }
   }
-}; 
+};
 
 login();
