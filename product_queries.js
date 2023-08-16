@@ -7,8 +7,8 @@ const User = {
 
 function login() {
   for (let intentos = 1; intentos <= 3; intentos++) {
-    const Username = prompt("enter your username");
-    const Password = prompt("enter your password");
+    const Username = document.getElementById(`username`).value;
+    const Password = document.getElementById(`password`).value;
 
     console.log(Username);
     console.log(Password);
@@ -23,6 +23,7 @@ function login() {
   }
   return false;
 };
+
 
 main();
 
@@ -42,8 +43,8 @@ function mainMenu() {
     const productsJSON = JSON.stringify(products);
     let output = "List of products:" + productsJSON;
     alert(output);
-    
-  }
+    mainMenu();
+   }
 
   if (menu == 2) {
     return false
@@ -79,5 +80,3 @@ function loadProducts() {
   console.log(loadedProducts);
   products = loadedProducts;
 }
-
-
